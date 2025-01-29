@@ -10,3 +10,7 @@ def hola_mundo():
 @app.get('/primerget/{id_usuario}')
 def primer_get(id: int, valor: Union[str,None]= None):
     return{"id":id, "valor": valor}
+
+@app.get('/obligatorio')
+def obligatorio(id: int, nombre: str, precio: float):
+    return{"id":id, "valor":nombre, "precio":precio}
